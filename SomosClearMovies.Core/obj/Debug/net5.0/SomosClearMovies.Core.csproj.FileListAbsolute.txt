@@ -1,0 +1,17 @@
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Core.deps.json
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Core.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\ref\SomosClearMovies.Core.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Core.pdb
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Infrastructure.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Models.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Infrastructure.pdb
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\bin\Debug\net5.0\SomosClearMovies.Models.pdb
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.csprojAssemblyReference.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.AssemblyInfoInputs.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.AssemblyInfo.cs
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.csproj.CoreCompileInputs.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.csproj.CopyComplete
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\ref\SomosClearMovies.Core.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Core\obj\Debug\net5.0\SomosClearMovies.Core.pdb

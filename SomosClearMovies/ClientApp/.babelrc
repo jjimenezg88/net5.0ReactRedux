@@ -1,0 +1,27 @@
+//.babelrc
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/transform-regenerator",
+        "@babel/plugin-transform-template-literals",
+        "@babel/plugin-syntax-jsx",
+        "transform-class-properties"
+    ],
+    "only": [
+        "./**/*.jsx",
+        "./**/*.js",
+        "node_modules/jest-runtime"
+    ]
+}

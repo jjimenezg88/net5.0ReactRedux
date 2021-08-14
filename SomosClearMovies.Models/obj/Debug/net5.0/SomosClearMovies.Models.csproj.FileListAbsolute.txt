@@ -1,0 +1,12 @@
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\bin\Debug\net5.0\SomosClearMovies.Models.deps.json
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\bin\Debug\net5.0\SomosClearMovies.Models.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\bin\Debug\net5.0\ref\SomosClearMovies.Models.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\bin\Debug\net5.0\SomosClearMovies.Models.pdb
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.csprojAssemblyReference.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.AssemblyInfoInputs.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.AssemblyInfo.cs
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.csproj.CoreCompileInputs.cache
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\ref\SomosClearMovies.Models.dll
+C:\Users\jorgejim\source\repos\SomosClearMovies\SomosClearMovies.Models\obj\Debug\net5.0\SomosClearMovies.Models.pdb

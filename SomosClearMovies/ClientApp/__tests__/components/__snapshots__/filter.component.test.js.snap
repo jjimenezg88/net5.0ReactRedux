@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterComponent /> render the component 1`] = `<Connect(FilterComponent) />`;
+
+exports[`<FilterComponent /> should create an entry in component state 1`] = `
+Array [
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+  Object {
+    "type": "GET_MOVIES_START",
+  },
+]
+`;
