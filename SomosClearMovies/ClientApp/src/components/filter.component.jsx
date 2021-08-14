@@ -4,12 +4,12 @@ import { FormGroup, Label, Input, Row, Col, Alert } from 'reactstrap';
 import { getMoviesStartAsync } from './../redux/movie';
 
 const FilterComponent = ({ getMovies }) => {
-    const [movieFilter, setMovieFilter] = useState({ title: '', genere: '', actorName: '' });
-    const { title, genere, actorName } = movieFilter
+    const [movieFilter, setMovieFilter] = useState({ title: '', genre: '', actorName: '' });
+    const { title, genre, actorName } = movieFilter
 
     useEffect(() => {
-        getMovies(title, genere, actorName);
-    }, [title, genere, actorName, getMovies]);
+        getMovies(title, genre, actorName);
+    }, [title, genre, actorName, getMovies]);
 
     const handleChange = event => {
         const { value, name } = event.target;
@@ -19,7 +19,7 @@ const FilterComponent = ({ getMovies }) => {
     return (
         <>
             <Alert id="alert-info" color="primary">
-                To filter just type on any input <b>(Title, Gender, and/or Actor Name)</b>!
+                To filter just type on any input <b>(Title, Genre, and/or Actor Name)</b>!
             </Alert>
             <Row>
                 <Col md="4">
@@ -31,9 +31,9 @@ const FilterComponent = ({ getMovies }) => {
                 </Col>
                 <Col md="4">
                     <FormGroup>
-                        <Label for="movie-genere">Genere</Label>
-                        <Input type="text" name="genere" id="movie-genere" placeholder="Enter a genere"
-                            value={genere} onChange={handleChange} />
+                        <Label for="movie-genre">Genre</Label>
+                        <Input type="text" name="genre" id="movie-genre" placeholder="Enter a genre"
+                            value={genre} onChange={handleChange} />
                     </FormGroup>
                 </Col>
                 <Col md="4">

@@ -24,7 +24,7 @@ const MoviePage = ({ movies, getMovies }) => {
                         <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Genere</th>
+                                <th>Genre</th>
                                 <th>Actors</th>
                             </tr>
                         </thead>
@@ -32,7 +32,7 @@ const MoviePage = ({ movies, getMovies }) => {
                             {movies.map((movie, index) =>
                                 <tr key={index}>
                                     <td>{movie.title}</td>
-                                    <td>{movie.genere}</td>
+                                    <td>{movie.genre}</td>
                                     <td>{movie.actors}</td>
                                 </tr>
                             )}

@@ -42,7 +42,7 @@ namespace SomosClearMovies.Infrastructure.Tests
             var txtSearch = "Action";
             var result = _dbContext.GetMovies(string.Empty, txtSearch, string.Empty);
             result.Count.Should().Be(3);
-            result.FirstOrDefault().Movie.Genere.Should().ContainEquivalentOf(txtSearch, AtLeast.Once());
+            result.FirstOrDefault().Movie.Genre.Should().ContainEquivalentOf(txtSearch, AtLeast.Once());
         }
 
         [TestMethod]

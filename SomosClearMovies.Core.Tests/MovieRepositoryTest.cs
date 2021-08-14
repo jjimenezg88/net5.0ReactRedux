@@ -45,7 +45,7 @@ namespace SomosClearMovies.Core.Tests
                     Movie = new Movie {
                         IdMovie = 1,
                         Title = "Movie 1",
-                        Genere = "Genere"
+                        Genre = "Genere"
                     },
                     Actor = new Actor
                     {

@@ -11,7 +11,7 @@ namespace SomosClearMovies.Models.Data
         [Key]
         public int IdMovie { get; set; }
         public string Title { get; set; }
-        public string Genere { get; set; }
+        public string Genre { get; set; }
 
         public virtual List<MovieActors> Actors { get; set; }
     }

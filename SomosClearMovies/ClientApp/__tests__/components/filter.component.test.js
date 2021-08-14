@@ -41,7 +41,7 @@ describe('<FilterComponent />', () => {
     test('should render alert', () => {
         const alert = mountedComponent.find(Alert);
         expect(alert).toHaveLength(1);
-        expect(alert.text()).toEqual('To filter just type on any input (Title, Gender, and/or Actor Name)!');
+        expect(alert.text()).toEqual('To filter just type on any input (Title, Genre, and/or Actor Name)!');
     });
 
     test('should render Row', () => {

@@ -16,12 +16,12 @@ const initialState = {
         movies: [
             {
                 title: 'Movie 1',
-                genere: 'Action',
+                genre: 'Action',
                 actors: ['Actor 1', 'Actor 2', 'Actor 3']
             },
             {
                 title: 'Movie 2',
-                genere: 'Action',
+                genre: 'Action',
                 actors: ['Actor 1', 'Actor 2', 'Actor 3']
             }
         ]

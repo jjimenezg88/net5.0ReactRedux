@@ -11,7 +11,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "MY SALINGER YEAR",
-                      Genere = "Comedy",
+                      Genre = "Comedy",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -39,7 +39,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "PALMER",
-                      Genere = "Drama",
+                      Genre = "Drama",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -67,7 +67,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "PERCY VS GOLIATH",
-                      Genere = "Drama",
+                      Genre = "Drama",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -95,7 +95,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "BLACK WIDOW",
-                      Genere = "Action",
+                      Genre = "Action",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -123,7 +123,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "AVENGERS: AGE OF ULTRON",
-                      Genere = "Adventure",
+                      Genre = "Adventure",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -148,7 +148,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "AVENGERS: INFINITY WAR",
-                      Genere = "Adventure",
+                      Genre = "Adventure",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -167,7 +167,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "AVENGERS: ENDGAME",
-                      Genere = "Adventure",
+                      Genre = "Adventure",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -186,7 +186,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "GHOST WORLD",
-                      Genere = "Comedy/Drama",
+                      Genre = "Comedy/Drama",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -211,7 +211,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "RICHARD III",
-                      Genere = "Drama",
+                      Genre = "Drama",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {
@@ -236,7 +236,7 @@ namespace SomosClearMovies.Infrastructure.Helpers
                   new Movie
                   {
                       Title = "THOR",
-                      Genere = "Adventure/Fantasy",
+                      Genre = "Adventure/Fantasy",
                       Actors = new List<MovieActors> {
                         new MovieActors
                         {

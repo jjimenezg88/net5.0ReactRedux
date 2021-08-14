@@ -46,7 +46,7 @@ namespace SomosClearMovies.Controllers
                 response = _movieRepository.GetMovies(new GetMoviesRequest
                 {
                     MovieTitle = title,
-                    MovieGenere = genere,
+                    MovieGenre = genere,
                     ActorName = actorName
                 });
             }

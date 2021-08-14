@@ -11,7 +11,7 @@ export const selectMovies = createSelector(
     [selectMoviesCollection],
     movies => movies.map(movie => ({
         title: movie.title,
-        genere: movie.genere,
+        genre: movie.genre,
         actors: movie.actors.join(', ')
     }))
 );

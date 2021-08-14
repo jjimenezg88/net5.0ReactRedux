@@ -62,7 +62,7 @@ namespace SomosClearMovies.Infrastructure
                         Expression.PropertyOrField(
                             parameter,
                             nameof(MovieActors.Movie)),
-                        nameof(Movie.Genere)),
+                        nameof(Movie.Genre)),
                     genere);
             }
 

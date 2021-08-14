@@ -30,12 +30,12 @@ namespace SomosClearMovies.Core
         /// <returns>A List of <see cref="MovieDetailed"/></returns>
         public IEnumerable<MovieDetailed> GetMovies(GetMoviesRequest request)
         {
-            var result = _moviesDbContext.GetMovies(request.MovieTitle, request.MovieGenere, request.ActorName)
+            var result = _moviesDbContext.GetMovies(request.MovieTitle, request.MovieGenre, request.ActorName)
                 .GroupBy(movie => movie.IdMovie)
                 .Select(movie => new MovieDetailed
                 {
                     Title = movie.FirstOrDefault().Movie.Title,
-                    Genere = movie.FirstOrDefault().Movie.Genere,
+                    Genre = movie.FirstOrDefault().Movie.Genre,
                     Actors = movie.Select(x => x.Actor.Name)
                 });
 
