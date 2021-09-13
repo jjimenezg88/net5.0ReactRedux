@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -33,6 +34,8 @@ namespace SomosClearMovies
 #pragma warning restore ASP0000 // Do not call 'IServiceCollection.BuildServiceProvider' in 'ConfigureServices'
 
             services.AddScoped<IMovieRepository, MovieRepository>();
+
+            services.AddMediatR(typeof(MovieRepository).Assembly);
 
             services.AddControllersWithViews();
 

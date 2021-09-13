@@ -21,5 +21,12 @@ namespace SomosClearMovies.Infrastructure.Interfaces
         /// <param name="actorName">Actor Name</param>
         /// <returns>A list of <see cref="MovieActors"/></returns>
         List<MovieActors> GetMovies(string title, string genere, string actorName);
+
+        /// <summary>
+        /// Add Movie
+        /// </summary>
+        /// <param name="movie">An object of <see cref="Movie"/></param>
+        /// <returns>An object of <see cref="MovieActors"/></returns>
+        List<MovieActors> AddMovie(Movie movie);
     }
 }

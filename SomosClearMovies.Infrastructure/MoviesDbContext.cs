@@ -89,6 +89,23 @@ namespace SomosClearMovies.Infrastructure
         }
 
         /// <summary>
+        /// Add Movie
+        /// </summary>
+        /// <param name="movie">An object of <see cref="Movie"/></param>
+        /// <returns>An object of <see cref="MovieActors"/></returns>
+        public List<MovieActors> AddMovie(Movie movie)
+        {
+            Movies.Add(movie);
+            SaveChanges();
+
+            return MoviesActors
+                .Include(movie => movie.Movie)
+                .Include(actor => actor.Actor)
+                .Where(x => x.IdMovie == movie.IdMovie)
+                .ToList();
+        }
+
+        /// <summary>
         /// Dynamic Contains Expression SQL Interpretation LIKE %{value}%
         /// </summary>
         /// <param name="expression">String Value</param>

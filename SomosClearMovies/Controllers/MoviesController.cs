@@ -1,10 +1,13 @@
 ﻿using System;
+using MediatR;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using SomosClearMovies.Models.View;
-using SomosClearMovies.Core.Interfaces;
+using SomosClearMovies.Core.Queries;
+using SomosClearMovies.Core.Commands;
 
 namespace SomosClearMovies.Controllers
 {
@@ -16,7 +19,7 @@ namespace SomosClearMovies.Controllers
     [Route("api/v{version:apiVersion}/[controller]/[action]")]
     public class MoviesController : ControllerBase
     {
-        private readonly IMovieRepository _movieRepository;
+        private readonly IMediator _mediator;
         private readonly ILogger<MoviesController> _logger;
 
         /// <summary>
@@ -24,9 +27,9 @@ namespace SomosClearMovies.Controllers
         /// </summary>
         /// <param name="movieRepository"></param>
         /// <param name="logger"></param>
-        public MoviesController(IMovieRepository movieRepository, ILogger<MoviesController> logger)
+        public MoviesController(IMediator mediator, ILogger<MoviesController> logger)
         {
-            _movieRepository = movieRepository ?? throw new ArgumentNullException(nameof(movieRepository));
+            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -38,17 +41,12 @@ namespace SomosClearMovies.Controllers
         /// <param name="actorName">Actor Movie</param>
         /// <returns>Colletion of <see cref="MovieDetailed"/></returns>
         [HttpGet]
-        public IActionResult GetMovies(string title, string genere, string actorName)
+        public async Task<IActionResult> GetMovies(string title, string genere, string actorName)
         {
             IEnumerable<MovieDetailed> response;
             try
             {
-                response = _movieRepository.GetMovies(new GetMoviesRequest
-                {
-                    MovieTitle = title,
-                    MovieGenre = genere,
-                    ActorName = actorName
-                });
+                response = await _mediator.Send(new GetMovieListQuery(title, genere, actorName));
             }
             catch (Exception ex)
             {
@@ -57,6 +55,28 @@ namespace SomosClearMovies.Controllers
             }
 
             return Ok(response);
+        }
+
+        /// <summary>
+        /// Add Movie
+        /// </summary>
+        /// <param name="movie"><see cref="MovieDetailed"/></param>
+        /// <returns><see cref="MovieDetailed"/></returns>
+        [HttpPost]
+        public async Task<IActionResult> AddMovie([FromBody] MovieDetailed movie)
+        {
+            MovieDetailed result;
+            try
+            {
+                result = await _mediator.Send(new AddMovieCommand(movie.Title, movie.Genre, movie.Actors));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+
+            return Ok(result);
         }
     }
 }
