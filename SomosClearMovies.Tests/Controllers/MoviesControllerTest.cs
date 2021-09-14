@@ -9,22 +9,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SomosClearMovies.Controllers;
 using SomosClearMovies.Core.Interfaces;
 using SomosClearMovies.Models.View;
+using MediatR;
+using SomosClearMovies.Core.Queries;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SomosClearMovies.Tests.Controllers
 {
     [TestClass]
     public class MoviesControllerTest
     {
-        private Mock<IMovieRepository> _mockMovieRepository;
+        private Mock<IMediator> _mockMediator;
         private Mock<ILogger<MoviesController>> _mockLogger;
         private MoviesController _controller;
 
         [TestInitialize]
         public void Setup()
         {
-            _mockMovieRepository = new Mock<IMovieRepository>();
+            _mockMediator = new Mock<IMediator>();
             _mockLogger = new Mock<ILogger<MoviesController>>();
-            _controller = new MoviesController(_mockMovieRepository.Object, _mockLogger.Object);
+            _controller = new MoviesController(_mockMediator.Object, _mockLogger.Object);
         }
 
         [TestMethod]
@@ -35,7 +39,7 @@ namespace SomosClearMovies.Tests.Controllers
                 new MoviesController(null, null);
             };
 
-            action.Should().Throw<ArgumentNullException>().And.ParamName.Should().Be("movieRepository");
+            action.Should().Throw<ArgumentNullException>().And.ParamName.Should().Be("mediator");
         }
 
         [TestMethod]
@@ -43,19 +47,19 @@ namespace SomosClearMovies.Tests.Controllers
         {
             Action action = () =>
             {
-                new MoviesController(_mockMovieRepository.Object, null);
+                new MoviesController(_mockMediator.Object, null);
             };
 
             action.Should().Throw<ArgumentNullException>().And.ParamName.Should().Be("logger");
         }
 
         [TestMethod]
-        public void GetMovies_MovieRepository_Throws_Exception()
+        public async Task GetMovies_MovieRepository_Throws_Exception()
         {
-            _mockMovieRepository.Setup(mock => mock.GetMovies(It.IsAny<GetMoviesRequest>()))
-                .Throws(new Exception("Exception Test"));
+            _mockMediator.Setup(mock => mock.Send(It.IsAny<GetMovieListQuery>(), default(CancellationToken)))
+            .ThrowsAsync(new Exception("Exception Test"));
 
-            var response = _controller.GetMovies(string.Empty, string.Empty, string.Empty);
+            var response = await _controller.GetMovies(string.Empty, string.Empty, string.Empty);
             response.Should().BeOfType<ObjectResult>();
             var result = (ObjectResult)response;
             result.StatusCode.Should().Be(StatusCodes.Status500InternalServerError);
@@ -63,15 +67,16 @@ namespace SomosClearMovies.Tests.Controllers
         }
 
         [TestMethod]
-        public void GetMovies_Ok()
+        public async Task GetMovies_Ok()
         {
             IEnumerable<MovieDetailed> testData = new List<MovieDetailed> {
                 new MovieDetailed()
             };
-            _mockMovieRepository.Setup(mock => mock.GetMovies(It.IsAny<GetMoviesRequest>()))
-                .Returns(testData);
 
-            var response = _controller.GetMovies(string.Empty, string.Empty, string.Empty);
+            _mockMediator.Setup(mock => mock.Send(It.IsAny<GetMovieListQuery>(), default(CancellationToken)))
+                .ReturnsAsync(testData);
+
+            var response = await _controller.GetMovies(string.Empty, string.Empty, string.Empty);
             response.Should().BeOfType<OkObjectResult>();
             var result = (OkObjectResult)response;
             result.StatusCode.Should().Be(StatusCodes.Status200OK);
